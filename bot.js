@@ -452,7 +452,7 @@ client.on("ready", () =>{
 
 
 client.on("ready", async () => {
-  client.user.setPresence({ activity: { name: "7/24 Aktif | .yardım " }, status: "idle" });
+  client.user.setPresence({ activity: { name: "💎 7/24 Aktif | .yardım " }, status: "idle" });
 
 
 setInterval(function() {
