@@ -451,11 +451,8 @@ client.on("ready", () =>{
     })
 
 
-client.on('ready', () => {
-  var botdurum = [
-"💰 7/24 Online | .yardım ",
-   //Burdaki Maddeleri Kendinize Göre Değiştirin 
-]
+client.on("ready", async () => {
+  client.user.setPresence({ activity: { name: "7/24 Aktif | .yardım " }, status: "idle" });
 
 
 setInterval(function() {
