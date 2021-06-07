@@ -453,10 +453,7 @@ client.on("ready", () =>{
 
 client.on('ready', () => {
   var botdurum = [
-"👌🏼 7/24 Online Kankss",      
-"👑 Twitch: Veinpalle",      
-"👽 Veinpale",
-"💰 Mutlak değer içindeki X gibiyim.",
+"💰 7/24 Online | .yardım ",
    //Burdaki Maddeleri Kendinize Göre Değiştirin 
 ]
 
