@@ -231,6 +231,11 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
+    if(message.content.toLowerCase() == "can") 
+    return message.channel.send(`**Hoş Geldin pezevenk :)**`)
+});
+
+client.on("message", message => {
     if(message.content.toLowerCase() == "uzayy") 
     return message.channel.send(`**Suyun içinde klorür senin kalbinde bir ömür...**`)
 });
