@@ -451,9 +451,25 @@ client.on("ready", () =>{
     })
 
 
-client.on("ready", async () => {
-  client.user.setPresence({ activity: { name: "💎 7/24 Aktif | .yardım " }, status: "idle" });
+client.on('ready', () => {
+  var botdurum = [
+"👌🏼 7/24 online",
+"💰 .yardım",
+   //Burdaki Maddeleri Kendinize Göre Değiştirin 
+]
 
+
+setInterval(function() {
+
+        var random = Math.floor(Math.random()*(botdurum.length-0+1)+0);
+       client.user.setActivity(botdurum[random], { type: 'LISTENING' });
+        }, 1 * 3000);//3000 Yerine Kaç Saniyede Değişmesini İstedini Kendinize Göre Ayarlayabilirsiniz 1000=1 Saniye Olarak 
+  console.log(`Hareketli Durum Çalışıyor. `);
+
+
+
+
+});
 
 client.on('guildMemberAdd', member => {
     const girişçıkış = member.guild.channels.cache.find(channel => channel.name === '「genel・sohbet」');
