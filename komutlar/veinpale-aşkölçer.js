@@ -1,64 +1,75 @@
-exports.run = async (client, msg, args) => {
-    let ask=[
-      "**Aşkölçer %3 Gösteriyor. (Sizden bir bok olmaz kanksss)**",
-      "**Aşkölçer %6 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %9 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %12 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %18 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %20 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %23 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %26 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %29 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %30 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %40 Gösteriyor. (Sevmiyor seni anla artık)**",
-      "**Aşkölçer %50 Gösteriyor. (Karar veremedim seviyor mu? sevmiyor mu? Ona sor bakalım)**",
-      "**Aşkölçer %60 Gösteriyor. (Fena değil hiç yoktan iyidir)**",
-      "**Aşkölçer %70 Gösteriyor. (İlerleme var bir daha dene :) )**",
-      "**Aşkölçer %73 Gösteriyor. (Olacak sizden hadiiii)**",
-      "**Aşkölçer %76 Gösteriyor. (Kardeşim biraz daha sabret olacak)**",
-      "**Aşkölçer %79 Gösteriyor. (Az kaldıııı hadiii laaa)**",
-      "**Aşkölçer %82 Gösteriyor. (Oluyoooorr gelliiyoooo)**",
-      "**Aşkölçer %85 Gösteriyor. (Bu sefer oldu sizden işte)**",
-      "**Aşkölçer %88 Gösteriyor. (Var bir şeyler var :) )**",
-      "**Aşkölçer %90 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %91 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %92 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %93 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %94 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %95 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %96 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %97 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %98 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %99 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-      "**Aşkölçer %100 Gösteriyor. (İşte gerçek aşk & sevgi!!!! )**",
-    ]
-      let member = msg.mentions.members.first()
-     if(!member)return msg.channel.send({embed: {
-   color: Math.floor(Math.random() * (0xFFFFFF + 1)),
-   description: (':no_entry_sign: **Kimi Sevdiğini etiketlemelisin..**')
-  }});
+const Discord = require('discord.js')
  
+exports.run = async (client, message, args) => {
+      if (!message.guild) {
+    const ozelmesajuyari = new Discord.MessageEmbed()
+    .setColor(0xFF0000)
+    .setTimestamp()
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .addField('**Komutları Özel Mesajlarda Kullanılamaz!**')
+    return message.author.send(ozelmesajuyari); }    
+  let member = message.guild.member(message.mentions.users.array()[0] ||  message.guild.members.cache.get(args[0]))
+        let member2 = message.guild.member(message.mentions.users.array()[1] || message.guild.members.cache.get(args[1]))
+        var s = message.author
+        if(member2) {
+                var s = member2.user
+        }
+        if(!member) {
+                const embed = new Discord.MessageEmbed()
+                        .setDescription(`**Aşk ölçmek için birini etiketlemen lazım,Hem seni ve hemde onu <3**`)
+                        .setColor("RED")
+                        .setTimestamp()
+                message.channel.send({embed})
+                return
+        }
  
+        var crewanasonuc = Math.floor(Math.random() * 101)
+        var crewkalp = ''
+        var crewkalp = ''
+        if(Math.floor(Math.round(crewanasonuc / 10) * 10) >= 10) {
+                var c = 0
+                for(var i = 0; i < Math.floor(Math.round(crewanasonuc / 10)); i++) {
+                        crewkalp += '❤️'
+                        c++
+                }
+                for(var x = c; x < 10; x++) {
+                        crewkalp += `🖤`
+                }
+        } else {
+                var crewkalp = '🖤'
+                var crewkalp = '🖤🖤🖤🖤🖤🖤🖤🖤🖤'
+        }
+        var crewyorum = `**Sizi evlendirelim <3**`
+        if(crewanasonuc < 90) {
+                var crewyorum = '**birazdaha uğraşırsan bu kız senin!**'
+        }
+        if(crewanasonuc < 70) {
+                var crewyorum = '**bilemedim bak**'
+        }
+        if(crewanasonuc < 50) {
+                var crewyorum = '**Çok azda olsa senden hoşlanıyo...**'
+        }
+        if(crewanasonuc < 30) {
+                var crewyorum = '**Seni sevmiyormuş ağa beeeeee...**'
+        }
+        const embed = new Discord.MessageEmbed()
+                .setAuthor(`${member.user.tag} | ${s.tag}`)
+                .setDescription(`**NE kadar seviyo bakalım** : ${crewanasonuc}\n${crewkalp}${crewkalp}\n\n${crewyorum}`)
+                .setColor("RED")
+                .setTimestamp()
+        message.channel.send({embed})
+}
  
-    else{
-    msg.channel.send({embed: {
-   color: Math.floor(Math.random() * (0xFFFFFF + 1)),
-   description: (`${member} ${ask[Math.floor(Math.random() * 30)]}.`)
-    }})
-    }
+exports.conf = {
+        enabled: true,
+        guildOnly: true,
+        aliases: [''],
+		kategori: "Eğlence",
+        permLevel: 0
+}
  
- 
-  }
- 
-  exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: 0
-   };
- 
-  exports.help = {
-    name: 'aşkölçer',
-    description: 'Aşk Ölçmeni sağlar.',
-    usage: 'aşkölçer'
-   }
+exports.help = {
+        name: 'aşk-ölç',
+        description: 'Aşk ölcer.',
+        usage: 'aşkölçer'
+}
