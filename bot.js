@@ -483,7 +483,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    const girişçıkış = member.guild.channels.cache.find(channel => channel.name === 'gi̇ri̇ş-çikiş');
+    const girişçıkış = member.guild.channels.cache.find(channel => channel.name === 'güle-güle');
     girişçıkış.send(`**Güle Güle :(** ${member}`);
 });
 
