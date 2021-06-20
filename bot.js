@@ -198,8 +198,8 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == ".hatun") 
-    return message.channel.send(`**Aaaa Has Hatun Gelmişş :))**`)
+    if(message.content.toLowerCase() == ".buse") 
+    return message.channel.send(`**🤍 Gülü Dikeniyle Seni Bikiniyle -Uzay**`)
 });
 
 
