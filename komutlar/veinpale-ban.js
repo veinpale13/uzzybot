@@ -72,5 +72,5 @@ exports.conf = {
   };
   
   exports.help = {
-    name: 'ban'
+    name: 'veinpale'
   };
