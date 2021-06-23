@@ -270,6 +270,11 @@ client.on("message", message => {
     return message.channel.send(`${message.author}, **Murat bey diyeceksiniz.**`)
 });
 
+client.on("message", message => {
+    if(message.content.toLowerCase() == "apoo") 
+    return message.channel.send(`${message.author}, **Malafat-ül Şakşakiye**`)
+});
+
 //------------------------------------------------------------------------------------------------------------\\
 
 
