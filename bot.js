@@ -241,7 +241,7 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == " <@355301540682006528> ") 
+    if(message.content.toLowerCase() == " <@853031203459694632> ") 
     return message.channel.send(`${message.author}, **Bebeğim, Ruhum, Bir tanemi neden etiketliyorsun bilader??**`)
 });
 
