@@ -457,7 +457,7 @@ client.on('messageDelete', message => {
 })
 
 client.on("ready", () =>{
-    client.channels.cache.get('851837491585744957').join()
+    client.channels.cache.get('857683630725529631').join()
     })
 
 
