@@ -114,7 +114,7 @@ let basari1 = new Discord.MessageEmbed()
   
   let basari1 = new Discord.MessageEmbed()
   .setColor('BLUE')
-  .setDescription(`You've walked away from your keyboard \nReason: ${a}`)
+  .setDescription(`Şuan için AFK'yım tekrardan geleceğim. \nReason: ${a}`)
       message.channel.send(basari1);
   
       message.member.setNickname(`AFK | ` + b);
