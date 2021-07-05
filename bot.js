@@ -122,22 +122,6 @@ client.login(ayarlar.token);
 //------------------------------------------------------------------------------------------------------------\\
 
 client.on("message", message => {
-    if(message.content.toLowerCase() == ".naz") 
-    return message.channel.send(`**Nammm Nammm Nammm**`)
-});
-
-client.on("message", message => {
-    if(message.content.toLowerCase() == ".naz2") 
-    return message.channel.send(`**Tek haneli IQ seviyesine sahip ama MÜKEMMEL BİR İNSAN 🤍**`)
-});
-
-client.on("message", message => {
-    if(message.content.toLowerCase() == ".mükemmelliyet") 
-    return message.channel.send(`**<@732373977657245778>**`)
-});
-
-
-client.on("message", message => {
     if(message.content.toLowerCase() == ".uzay") 
     return message.channel.send(`💰**SUGAR DADDY**💰`)
 });
@@ -154,7 +138,7 @@ client.on("message", message => {
 
 client.on("message", message => {
     if(message.content.toLowerCase() == ".instagram") 
-    return message.channel.send(`**☑️ _uzay.dll**`)
+    return message.channel.send(`**☑️ _veinpale.dll**`)
 });
 
 client.on("message", message => {
@@ -190,11 +174,6 @@ client.on("message", message => {
 client.on("message", message => {
     if(message.content.toLowerCase() == ".şampiyon") 
     return message.channel.send(`**🦅🤍 BEŞİKTAŞŞŞŞŞŞŞ 🤍🦅**`)
-});
-
-client.on("message", message => {
-    if(message.content.toLowerCase() == ".rita") 
-    return message.channel.send(`**AYYY GÖTÜMMMM :)**`)
 });
 
 client.on("message", message => {
