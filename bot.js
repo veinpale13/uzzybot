@@ -436,16 +436,26 @@ client.on('messageDelete', message => {
 })
 
 client.on("ready", () =>{
-    client.channels.cache.get('857683630725529631').join()
+    client.channels.cache.get('865017813646049281').join()
     })
 
 
-client.on('ready', () => {
-  var botdurum = [
-"👌🏼 7/24 online",
-"💰 .yardım",
-   //Burdaki Maddeleri Kendinize Göre Değiştirin 
-]
+const Moment = require('moment')
+const Discord = require('discord.js')
+let prefix = 'bot prefix'
+module.exports = client => {
+  
+  const aktiviteListesi = [
+    `Davşan Artz`
+  ]
+
+  client.user.setStatus('DND')
+  
+  setInterval(() => {
+    const Aktivite = Math.floor(Math.random() * (aktiviteListesi.length - 1))
+    client.user.setActivity(aktiviteListesi[Aktivite])
+  }, 5000)
+}
 
 
 setInterval(function() {
